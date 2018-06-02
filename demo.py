@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     # Create using sci-kit learn's LinearSVC, using same hyperparameters
     sklearn_clf = LinearSVC(loss='squared_hinge', C=1.0, tol=0.0001, max_iter=1000,
-                            fit_intercept=False, multiclass='ovr') #same hyperparameters
+                            fit_intercept=False) #same hyperparameters
     sklearn_clf.fit(X_train, y_train)
     sk_score = sklearn_clf.score(X_test, y_test)
     sk_predictions = sklearn_clf.predict(X_test)
